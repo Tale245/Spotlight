@@ -8,17 +8,12 @@
   margin: 0 auto;
   position: sticky;
   top: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 3;
 }
 .header__container{
   margin: 0 auto;
   background-color: black;
-  width: 100vw;
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  right: 0; */
   z-index: -1;
   min-height: 96px;
   border-bottom: 1px solid #00C2FF;
@@ -47,7 +42,7 @@
   color: rgba(0, 194, 255, 1);
 }
 
-.header__link:nth-of-type(2){
+.header__link:nth-of-type(3){
   margin-right: 50px;
 }
 .header__link:last-of-type{
@@ -242,7 +237,7 @@ margin: 0 auto;
   grid-template-columns: repeat(3, 1fr);
   gap: 23px
 }
-.photo-container_active{
+.main-info__photo-container_active{
   display: grid;
 }
 .main-info__item{
