@@ -65,6 +65,7 @@ window.addEventListener("resize", function() {
     changeOnNoGrid()
   } else if (this.innerWidth > 630){
     btnGrid.disabled = false;
+    btnGrid.classList.remove('buttons__item-grid_disabled')
     changeOnGrid()
   }
 }, true);
