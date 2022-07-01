@@ -636,21 +636,21 @@ font-weight: 300;
 }
 @media screen and (max-width: 1300px)  {
   .main-content__container-nogrid{
-    margin-bottom: 40px;;
+    margin-bottom: 40px;
     width: 45%;
     height: 45%;
   }
 }
 @media screen and (max-width: 650px)  {
   .main-content__container-nogrid{
-    margin-bottom: 40px;;
+    margin-bottom: 40px;
     width: 70%;
     height: 70%;
   }
 }
 @media screen and (max-width: 500px)  {
   .main-content__container-nogrid{
-    margin-bottom: 40px;;
+    margin-bottom: 40px;
     width: 80%;
     height: 80%;
   }
