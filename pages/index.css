@@ -659,6 +659,8 @@ font-weight: 300;
   margin: 0;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  width: 100%;
+  height: 100%;
 }
 .main-content__text-container{
   margin: 0;
