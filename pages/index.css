@@ -631,10 +631,10 @@ font-weight: 300;
   margin-bottom: 60px;
   display: flex;
   flex-direction: column;
-  width: 55%;
-  height: 55%;
+  max-width: 55%;
+  max-height: 55%;
 }
-@media screen and (max-width: 1300px)  {
+/* @media screen and (max-width: 1300px)  {
   .main-content__container-nogrid{
     margin-bottom: 40px;;
     width: 45%;
@@ -654,7 +654,7 @@ font-weight: 300;
     width: 80%;
     height: 80%;
   }
-}
+} */
 .main-content__image-nogrid{
   margin: 0;
   border-top-left-radius: 10px;
