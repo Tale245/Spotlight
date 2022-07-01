@@ -74,9 +74,6 @@
     margin-right: 8px;
   }
 }
-.header__link-first{
-  margin-top: 45px;
-}
 .header__logo{
   margin: 0 auto;
   left: 0;
@@ -535,6 +532,9 @@ font-weight: 300;
   margin: 0;
   background-image: url(../images/button-flex-menu.svg);
   background-repeat: no-repeat;
+}
+.buttons__item-grid_disabled{
+  opacity: 0.7
 }
 .buttons__item-nogrid{
   margin: 0;
