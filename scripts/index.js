@@ -59,13 +59,13 @@ btnGrid.addEventListener('click', () => {
 })
 
 // const changeScreen = () 
-window.addEventListener("resize", function() {
-  if(this.innerWidth < 630) {
-    btnGrid.disabled = true;
-    btnGrid.classList.add('buttons__item-grid_disabled')
-    changeOnNoGrid()
-  } else if (this.innerWidth > 630){
-    btnGrid.disabled = false;
-    changeOnGrid()
-  }
-}, true);
+// window.addEventListener("resize", function() {
+//   if(this.innerWidth < 630) {
+//     btnGrid.disabled = true;
+//     btnGrid.classList.add('buttons__item-grid_disabled')
+//     changeOnNoGrid()
+//   } else if (this.innerWidth > 630){
+//     btnGrid.disabled = false;
+//     changeOnGrid()
+//   }
+// }, true);
