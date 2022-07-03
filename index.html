@@ -126,7 +126,19 @@
       </div>
     </div>
   </section>
-
+  <div class="popup popup_add-item">
+    <div class="popup__overlay"></div>
+    <div class="popup__container">
+      <h2 class="popup__title">ADD PHOTO</h2>
+      <form class="popup__form">
+        <input class="popup__input input-link" placeholder="Ссылка на фотографию" required>
+        <input class="popup__input input-model" placeholder="Кто или что на фотографии?" required>
+        <input class="popup__input input-device" placeholder="На что снято?" required>
+        <input class="popup__input input-description" placeholder="Описание фото (20симв.)">
+        <button type="submit" class="popup__submit-button"><span class="popup__button-span">Добавить</span> </button>
+      </form>
+    </div>
+  </div>
   <script src="./scripts/index.js"></script>
 </body>
 </html>

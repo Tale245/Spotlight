@@ -659,8 +659,6 @@ font-weight: 300;
   margin: 0;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  width: 100%;
-  height: 100%;
 }
 .main-content__text-container{
   margin: 0;
@@ -694,4 +692,131 @@ font-weight: 300;
 }
 .display_none{
   display: none;
+}
+/* CSS FOR POPUP */
+.popup{
+  margin: 0;
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+}
+.popup_active{
+  display: flex;
+}
+.popup__overlay{
+  margin: 0 auto;
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  z-index: -1;
+}
+.popup__container{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 811px;
+  height: 615px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+@media screen and (max-width: 1024px)  {
+  .popup__container{
+    width: 694px;
+  }
+}
+@media screen and (max-width: 700px)  {
+  .popup__container{
+    width: 299px;
+    height: 404px;
+  }
+}
+.popup__title{
+  margin: 0 auto;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 61px;
+  color: #000000;
+}
+@media screen and (max-width: 700px)  {
+  .popup__title{
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+.popup__form{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.popup__input{
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 300px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #000000;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 21px;
+}
+.popup__input:first-of-type{
+  margin-top: 50px;
+}
+@media screen and (max-width: 700px)  {
+  .popup__input{
+    margin-bottom: 30px;
+    width: 250px;
+    height: 20px;
+  }
+}
+.popup__submit-button{
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 292px;
+  height: 35px;
+  border: 1px solid #000000;
+  background: none;
+  border-radius: 10px;
+  transition: opacity 200ms ease-in-out;
+  cursor: pointer;
+}
+.popup__submit-button:hover{
+  opacity: 0.7;
+}
+@media screen and (max-width: 700px)  {
+  .popup__submit-button{
+    width: 240px;
+    height: 35px;
+    margin-top: 10px;
+  }
+}
+.popup__button-span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
 }
