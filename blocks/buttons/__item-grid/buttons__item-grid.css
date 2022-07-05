@@ -1,0 +1,5 @@
+.buttons__item-grid{
+  margin: 0;
+  background-image: url(../../../images/button-flex-menu.svg);
+  background-repeat: no-repeat;
+}

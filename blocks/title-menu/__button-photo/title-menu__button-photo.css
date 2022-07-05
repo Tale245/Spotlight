@@ -1,0 +1,22 @@
+.title-menu__button-photo{
+  margin: 0 ;
+  margin-left: 111px;
+  background-image: url(../../../images/button-photo.svg);
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 1024px) {
+  .title-menu__button-photo{
+    margin-left: 60px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .title-menu__button-photo{
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 730px) {
+  .title-menu__button-photo{
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}

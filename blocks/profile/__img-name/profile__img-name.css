@@ -1,0 +1,28 @@
+.profile__img-name{
+  margin-top: 70px;
+}
+@media screen and (max-width: 1024px){
+  .profile__img-name{
+  margin-top: 69px;
+  }
+}
+@media screen and (max-width: 1000px){
+  .profile__img-name{
+  margin-top: 68px;
+  }
+}
+@media screen and (max-width: 800px){
+  .profile__img-name{
+  margin-top: 67px;
+  }
+}
+@media screen and (max-width: 650px){
+  .profile__img-name{
+  margin-top: 63px;
+  }
+}
+@media screen and (max-width: 550px){
+  .profile__img-name{
+  margin-top: 56px;
+  }
+}

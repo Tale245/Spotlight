@@ -1,0 +1,22 @@
+.title-menu__button-video{
+  margin: 0 ;
+  margin-right: 111px;
+  background-image: url(../../../images/button-video.svg);
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 1024px) {
+  .title-menu__button-video{
+    margin-right: 60px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .title-menu__button-video{
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 730px) {
+  .title-menu__button-video{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}

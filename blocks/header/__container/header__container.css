@@ -1,0 +1,9 @@
+.header__container{
+  margin: 0 auto;
+  background-color: black;
+  z-index: -1;
+  min-height: 96px;
+  border-bottom: 1px solid #00C2FF;
+  display: flex;
+  justify-content: space-between;
+}

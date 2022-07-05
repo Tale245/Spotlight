@@ -1,0 +1,9 @@
+.buttons__container{
+  margin: 0 auto;
+  max-width: 110px;
+  display: flex;
+  justify-content: center;
+  column-gap: 14px;
+  align-items: center;
+  margin-bottom: 25px;
+}

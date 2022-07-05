@@ -1,0 +1,11 @@
+.title-menu__button-q{
+  margin: 0;
+  margin-right: 26px;
+  background-image: url(../../../images/button-q.svg);
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 1024px) {
+  .title-menu__button-q{
+    margin-right: 0px;
+  }
+}

@@ -1,0 +1,12 @@
+.header__container-link{
+  margin: 0;
+  margin-top: 45px;
+}
+@media screen and (max-width: 700px) {
+  .header__container-link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+  }
+}

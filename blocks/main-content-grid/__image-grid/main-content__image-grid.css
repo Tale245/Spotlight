@@ -1,0 +1,19 @@
+.main-content__image-grid{
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid rgba(17, 17, 17, 1);
+  object-fit: cover;
+  width: 321px;
+  height: 407px;
+  transition: border 200ms ease-in-out;
+}
+@media screen and (max-width: 768px)  {
+  .main-content__image-grid{
+    width: 290px;
+    height: 377px;
+  }
+}
+.main-content__image-grid:hover{
+  border: 1px solid #00C2FF;
+  cursor: pointer;
+}

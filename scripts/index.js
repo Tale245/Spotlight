@@ -29,7 +29,7 @@ const changeOnNoGrid = () => {
   changeMainContentOnNoGrid.addClassForAloneSelector()
 }
 
-btnNoGrid.addEventListener('click', () => {
+btnNoGrid.addEventListener('click', (event) => {
   changeOnNoGrid()
 })
 
@@ -88,8 +88,8 @@ window.addEventListener("resize", function() {
 }, true);
 
 const ob = [
-  {link: 'https://images.unsplash.com/photo-1536896407451-6e3dd976edd1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-  model: "Я",
+  {link: 'https://images.unsplash.com/photo-1657030871212-95d863306bed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=689&q=80',
+  model: "Причал",
   device: 'CANON',
   description: 'Привет!'
 },
@@ -139,9 +139,9 @@ const addImage = (event) => {
   closePopup()
   formAddImage.reset()
 }
-// ob.forEach((item) => {
-//   createImage(item.link, item.model, item.device, item.description)
-// })
+ob.forEach((item) => {
+  createImage(item.link, item.model, item.device, item.description)
+})
 
 
 // Сабмит формы

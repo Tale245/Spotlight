@@ -1,0 +1,7 @@
+.profile__card-container{
+  margin: 0 auto;
+  position: relative;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}

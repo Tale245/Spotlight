@@ -1,0 +1,16 @@
+.title-menu__button-add{
+  margin: 0;
+  margin-left: 26px;
+  background-image: url(../../../images/button-add.svg);
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 1024px) {
+  .title-menu__button-add{
+    margin-left: 15px;
+  };
+}
+@media screen and (max-width: 850px) {
+  .title-menu__button-add{
+    margin-left: 10px;
+  };
+}
