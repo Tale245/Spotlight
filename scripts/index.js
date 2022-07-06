@@ -1,7 +1,8 @@
 import AddRemove from "./AddRemove.js";
 
 const popupAddItem = document.querySelector('.popup_add-item')
-const popupOverlay = document.querySelector('.popup__overlay')
+const popupOverlay = document.querySelector('.popup__overlay');
+const popupOverlayImage = document.querySelector('.popup__overlay_img');
 const btnAddItem = document.querySelector('.title-menu__button-add')
 const mainContainer = document.querySelector('#main-content__container')
 const formAddImage = document.querySelector('.popup__form_add-Image');
@@ -15,7 +16,8 @@ const mainContent = document.querySelector('.main-content-grid');
 const mainContentContainer = document.querySelectorAll('.main-content__container-grid');
 const mainContentImage = document.querySelectorAll('.main-content__image-grid');
 const mainContentTextContainer = document.querySelectorAll('.main-content__text-container');
-
+const popupOpenImage = document.querySelector('.popup_open-image')
+const popupImage = popupOpenImage.querySelector('.popup__image-scale')
 // Меняем дизайн меню на NO GRID 
 const changeMainContentContainerOnNoGrid  = new AddRemove({selector: mainContentContainer, NewClassName: 'main-content__container-nogrid'});
 const changeMainContentImageOnNoGrid = new AddRemove({selector: mainContentImage, NewClassName: 'main-content__image-nogrid'});
@@ -28,6 +30,7 @@ const changeOnNoGrid = () => {
   changeMainContentTextContainerOnNoGrid.removeClass()
   changeMainContentOnNoGrid.addClassForAloneSelector()
 }
+
 
 btnNoGrid.addEventListener('click', (event) => {
   changeOnNoGrid()
@@ -52,38 +55,44 @@ btnGrid.addEventListener('click', () => {
 // Закрытие попапа на ESC
 const closePopupOnEsc = (event) => {
   if (event.key === "Escape"){
-    closePopup()
+    const popupIsOpened = document.querySelector('.popup_active')
+    closePopup(popupIsOpened)
   }
 }
 // Функция открытия попапа
-const openPopup = () => {
-  popupAddItem.classList.add('popup_active');
+const openPopup = (popup) => {
+  popup.classList.add('popup_active');
   document.addEventListener('keyup', closePopupOnEsc);
 }
 // Функция закрытия попапа
-const closePopup = () => {
-  popupAddItem.classList.remove('popup_active');
+const closePopup = (popup) => {
+  popup.classList.remove('popup_active');
   document.removeEventListener('keyup', closePopupOnEsc);
 }
 
 // Открытие попапа на кнопку
 btnAddItem.addEventListener('click', () => {
-  openPopup()
+  openPopup(popupAddItem)
 })
 // Закрытие попапа кликом на оверлей
 popupOverlay.addEventListener('click', () => {
-  closePopup()
+  closePopup(popupAddItem)
+})
+popupOverlayImage.addEventListener('click', () => {
+  closePopup(popupOpenImage)
 })
 // Функция включающая НЕ ГРИД и отключающая кнопку ГРИД при разрешении экрана менее 631px
 window.addEventListener("resize", function() {
   if(this.innerWidth < 631) {
     btnGrid.disabled = true;
     btnGrid.classList.add('buttons__item-grid_disabled')
+    popupOpenImage.className = ''
     changeOnNoGrid()
   } else {
     btnGrid.disabled = false;
     btnGrid.classList.remove('buttons__item-grid_disabled')
-    changeOnGrid()
+    popupOpenImage.className = 'popup popup_open-image'
+    popupOpenImage.classList.remove('popup_acitve')
   }
 }, true);
 
@@ -117,7 +126,18 @@ const addInputValues = (link, model, device, description) => {
   textDevice.textContent = device;
   textDesription.textContent = description;
 
+  const imageModel = popupOpenImage.querySelector('.image-model')
+  const imageDevice = popupOpenImage.querySelector('.image-device')
+  const imageDescription = popupOpenImage.querySelector('.image-description')
 
+  templateImage.addEventListener('click', () => {
+    openPopup(popupOpenImage)
+    popupImage.src = link;
+    popupImage.alt = description
+    imageModel.textContent = model;
+    imageDevice.textContent = device;
+    imageDescription.textContent = description;
+  })
   return photoTemplate
 }
 
@@ -136,7 +156,7 @@ const addImage = (event) => {
   const description = inputDescription.value
   const link = inputLink.value
   createImage(link, model, device, description);
-  closePopup()
+  closePopup(popupAddItem)
   formAddImage.reset()
 }
 ob.forEach((item) => {

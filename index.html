@@ -61,12 +61,12 @@
   </section>
 
   <section class="main-content-grid" id="main-content__container">
-    <div class="main-content__container-grid">
+    <div class="main-content__container-grid" id="main-container">
       <img class="main-content__image-grid" src="https://images.unsplash.com/photo-1536896407451-6e3dd976edd1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt='image'>
       <div class="main-content__text-container display_none">
-        <p class="main-content__text main-content__text_model">Модель: <span class="main-content__text-span">Я</span></p>
+        <p class="main-content__text main-content__text_model">На фото: <span class="main-content__text-span">Я</span></p>
         <p class="main-content__text main-content__text_device">Оборудование: <span class="main-content__text-span">CANON 900D</span></p>
-        <p class="main-content__text main-content__text_description">Описание: <span class="main-content__text-span">КАК Я ЛЮБЛЮ ТЕБЯ</span></p>
+        <p class="main-content__text main-content__text_description">Описание: <span class="main-content__text-span">AYOOO</span></p>
       </div>
     </div>
   </section>
@@ -83,13 +83,27 @@
       </form>
     </div>
   </div>
+  <div class="popup popup_open-image">
+    <div class="popup__overlay popup__overlay_img"></div>
+      <div class="popup__container_image">
+        <img src="https://images.unsplash.com/photo-1536896407451-6e3dd976edd1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" class="popup__image-scale">
+        <div class="container-text">
+        <div class="popup__container-text">
+          <p class="popup__image-text popup__image-text __text_model">На фото: <span class="popup__image-text__text-span image-model"></span></p>
+          <p class="popup__image-text popup__image-text __text_device">Оборудование: <span class="popup__image-text__text-span image-device"></span></p>
+          <p class="popup__image-text popup__image-text __text_description">Описание: <span class="popup__image-text__text-span image-description"></span></p>
+        </div>
+        <p class="popup__image-text text-time">Скоро здесь что-то появится! Но пока мне нельзя говорить, что именно :)</p>
+      </div>
+      </div>
+  </div>
   <template id="template">
     <div class="main-content__container-grid">
-    <img class="main-content__image-grid" src="https://images.unsplash.com/photo-1536896407451-6e3dd976edd1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt='image'>
+    <img class="main-content__image-grid" alt='image'>
     <div class="main-content__text-container display_none">
-      <p class="main-content__text main-content__text_model">Модель: <span class="main-content__text-span span-model">Я</span></p>
-      <p class="main-content__text main-content__text_device">Оборудование: <span class="main-content__text-span span-device">CANON 900D</span></p>
-      <p class="main-content__text main-content__text_description">Описание: <span class="main-content__text-span span-description">AYOOO</span></p>
+      <p class="main-content__text main-content__text_model">На фото: <span class="main-content__text-span span-model"></span></p>
+      <p class="main-content__text main-content__text_device">Оборудование: <span class="main-content__text-span span-device"></span></p>
+      <p class="main-content__text main-content__text_description">Описание: <span class="main-content__text-span span-description"></span></p>
     </div>
     </div>
   </template>

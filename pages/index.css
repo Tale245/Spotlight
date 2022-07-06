@@ -60,3 +60,47 @@
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popup/__submit-button/popup__submit-button.css);
 @import url(../blocks/popup/__button-span/popup__button-span.css);
+
+
+.popup__container_image{
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, .5);
+  display:flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.popup__image-scale{
+  max-width: 75vw;
+  max-height: 75vh;
+  z-index: 5;
+}
+.popup__container-text{
+  margin: 0;
+  padding-top: 22px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  min-width: 392px;
+  min-height: 138px;
+}
+.popup__image-text{
+  margin: 0;
+  margin-top: 9px;
+  margin-left: 22px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+
+}
+.text-time{
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 25vh;
+  color: white;
+  max-width: 300px
+}
+.popup__image-text__text-span{
+  font-weight: 300;
+}
