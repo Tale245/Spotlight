@@ -1,3 +1,4 @@
+
 import AddRemove from "./AddRemove.js";
 
 const popupAddItem = document.querySelector('.popup_add-item')
@@ -10,15 +11,19 @@ const inputLink = document.querySelector('.input-link');
 const inputModel = document.querySelector('.input-model');
 const inputDevice = document.querySelector('.input-device');
 const inputDescription = document.querySelector('.input-description');
+
 const btnGrid = document.querySelector('.buttons__item-grid');
 const btnNoGrid = document.querySelector('.buttons__item-nogrid');
 const mainContent = document.querySelector('.main-content-grid');
-const mainContentContainer = document.querySelectorAll('.main-content__container-grid');
-const mainContentImage = document.querySelectorAll('.main-content__image-grid');
-const mainContentTextContainer = document.querySelectorAll('.main-content__text-container');
 const popupOpenImage = document.querySelector('.popup_open-image')
 const popupImage = popupOpenImage.querySelector('.popup__image-scale')
 // Меняем дизайн меню на NO GRID 
+
+btnNoGrid.addEventListener('click', () => {
+  const mainContentContainer = document.querySelectorAll('.main-content__container-grid');
+const mainContentImage = document.querySelectorAll('.main-content__image-grid');
+const mainContentTextContainer = document.querySelectorAll('.main-content__text-container');
+
 const changeMainContentContainerOnNoGrid  = new AddRemove({selector: mainContentContainer, NewClassName: 'main-content__container-nogrid'});
 const changeMainContentImageOnNoGrid = new AddRemove({selector: mainContentImage, NewClassName: 'main-content__image-nogrid'});
 const changeMainContentTextContainerOnNoGrid = new AddRemove({selector: mainContentTextContainer, NewClassName: 'display_none'});
@@ -30,17 +35,17 @@ const changeOnNoGrid = () => {
   changeMainContentTextContainerOnNoGrid.removeClass()
   changeMainContentOnNoGrid.addClassForAloneSelector()
 }
-
-
-btnNoGrid.addEventListener('click', (event) => {
   changeOnNoGrid()
 })
 
-// Меняем дизайн меню на GRID 
-const changeMainContentContainerOnGrid  = new AddRemove({selector: mainContentContainer, NewClassName: 'main-content__container-grid'});
-const changeMainContentImageOnGrid = new AddRemove({selector: mainContentImage, NewClassName: 'main-content__image-grid'});
-const changeMainContentTextContainerOnGrid = new AddRemove({selector: mainContentTextContainer, NewClassName: 'display_none'});
-const changeMainContentOnGrid  = new AddRemove({selector: mainContent, NewClassName: 'main-content-grid'});
+btnGrid.addEventListener('click', () => {
+  const mainContentContainer = document.querySelectorAll('.main-content__container-nogrid');
+  const mainContentImage = document.querySelectorAll('.main-content__image-nogrid');
+  const mainContentTextContainer = document.querySelectorAll('.main-content__text-container');
+  const changeMainContentContainerOnGrid  = new AddRemove({selector: mainContentContainer, NewClassName: 'main-content__container-grid'});
+  const changeMainContentImageOnGrid = new AddRemove({selector: mainContentImage, NewClassName: 'main-content__image-grid'});
+  const changeMainContentTextContainerOnGrid = new AddRemove({selector: mainContentTextContainer, NewClassName: 'display_none'});
+  const changeMainContentOnGrid  = new AddRemove({selector: mainContent, NewClassName: 'main-content-grid'});
 
 const changeOnGrid = () => {
   changeMainContentContainerOnGrid.changeClass()
@@ -48,8 +53,7 @@ const changeOnGrid = () => {
   changeMainContentTextContainerOnGrid.addClass()
   changeMainContentOnGrid.addClassForAloneSelector()
 }
-btnGrid.addEventListener('click', () => {
-  changeOnGrid()
+changeOnGrid()
 })
 
 // Закрытие попапа на ESC
@@ -87,7 +91,6 @@ window.addEventListener("resize", function() {
     btnGrid.disabled = true;
     btnGrid.classList.add('buttons__item-grid_disabled');
     popupOpenImage.classList.add('display_none')
-    changeOnNoGrid()
   } else {
     btnGrid.disabled = false;
     btnGrid.classList.remove('buttons__item-grid_disabled')
@@ -167,6 +170,21 @@ const addImage = (event) => {
   const link = inputLink.value
   createImage(link, model, device, description);
   closePopup(popupAddItem)
+  const mainContentContainer = document.querySelectorAll('.main-content__container-nogrid');
+  const mainContentImage = document.querySelectorAll('.main-content__image-nogrid');
+  const mainContentTextContainer = document.querySelectorAll('.main-content__text-container');
+  const changeMainContentContainerOnGrid  = new AddRemove({selector: mainContentContainer, NewClassName: 'main-content__container-grid'});
+  const changeMainContentImageOnGrid = new AddRemove({selector: mainContentImage, NewClassName: 'main-content__image-grid'});
+  const changeMainContentTextContainerOnGrid = new AddRemove({selector: mainContentTextContainer, NewClassName: 'display_none'});
+  const changeMainContentOnGrid  = new AddRemove({selector: mainContent, NewClassName: 'main-content-grid'});
+
+const changeOnGrid = () => {
+  changeMainContentContainerOnGrid.changeClass()
+  changeMainContentImageOnGrid.changeClass()
+  changeMainContentTextContainerOnGrid.addClass()
+  changeMainContentOnGrid.addClassForAloneSelector()
+}
+changeOnGrid()
   formAddImage.reset()
 }
 ob.forEach((item) => {
