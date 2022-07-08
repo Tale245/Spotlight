@@ -85,27 +85,37 @@ popupOverlayImage.addEventListener('click', () => {
 window.addEventListener("resize", function() {
   if(this.innerWidth < 631) {
     btnGrid.disabled = true;
-    btnGrid.classList.add('buttons__item-grid_disabled')
-    popupOpenImage.className = ''
+    btnGrid.classList.add('buttons__item-grid_disabled');
+    popupOpenImage.classList.add('display_none')
     changeOnNoGrid()
   } else {
     btnGrid.disabled = false;
     btnGrid.classList.remove('buttons__item-grid_disabled')
-    popupOpenImage.className = 'popup popup_open-image'
-    popupOpenImage.classList.remove('popup_acitve')
+    popupOpenImage.classList.remove('display_none')
+    popupOpenImage.classList.remove('popup_active')
   }
 }, true);
 
 const ob = [
-  {link: 'https://images.unsplash.com/photo-1657030871212-95d863306bed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=689&q=80',
-  model: "Причал",
-  device: 'CANON',
-  description: 'Привет!'
+  {link: 'https://sun9-east.userapi.com/sun9-18/s/v1/if2/Vk6iQlge1cwR0iF5sQOLFPXWl2fuyVfYCAP_teBykW0yS9IbCZwKNKcSFm8JlP8TXv9p2UnthuxMZaitUNRx5jdF.jpg?size=1473x1919&quality=95&type=album',
+  model: "Why not?",
+  device: 'Iphone 11',
+  description: 'we are'
 },
-  {link: 'https://images.unsplash.com/photo-1656875394347-41798ac96aa2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=755&q=80',
-  model: "Мы",
-  device: 'SAMSUNG',
-  description: 'Хэй!'
+{link: 'https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=693&q=80',
+model: "Роза",
+device: 'SONY, ILCE-7RM3',
+description: 'Roses are red...'
+},
+//   {link: 'https://sun9-west.userapi.com/sun9-6/s/v1/if2/OI7lBIFgkPMtUgo00WzOVQfI1GU8l_0kWwlPztpPRZ-zGVni0jwfT38ChWJIWy9V6AX0iR4OUiD1P50ndD2Z7TVx.jpg?size=959x720&quality=95&type=album',
+//   model: "My friend",
+//   device: 'Iphone 11',
+//   description: 'Someday'
+// },
+  {link: 'https://images.unsplash.com/photo-1586043389213-c38c53ca269d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=766&q=80',
+  model: "-",
+  device: 'Iphone 7',
+  description: 'Never stop loving ♡'
 }
 ]
 
