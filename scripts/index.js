@@ -29,13 +29,10 @@ const changeMainContentImageOnNoGrid = new AddRemove({selector: mainContentImage
 const changeMainContentTextContainerOnNoGrid = new AddRemove({selector: mainContentTextContainer, NewClassName: 'display_none'});
 const changeMainContentOnNoGrid  = new AddRemove({selector: mainContent, NewClassName: 'main-content-nogrid'});
 
-const changeOnNoGrid = () => {
   changeMainContentContainerOnNoGrid.changeClass()
   changeMainContentImageOnNoGrid.changeClass()
   changeMainContentTextContainerOnNoGrid.removeClass()
   changeMainContentOnNoGrid.addClassForAloneSelector()
-}
-  changeOnNoGrid()
 })
 
 btnGrid.addEventListener('click', () => {
@@ -47,13 +44,11 @@ btnGrid.addEventListener('click', () => {
   const changeMainContentTextContainerOnGrid = new AddRemove({selector: mainContentTextContainer, NewClassName: 'display_none'});
   const changeMainContentOnGrid  = new AddRemove({selector: mainContent, NewClassName: 'main-content-grid'});
 
-const changeOnGrid = () => {
   changeMainContentContainerOnGrid.changeClass()
   changeMainContentImageOnGrid.changeClass()
   changeMainContentTextContainerOnGrid.addClass()
   changeMainContentOnGrid.addClassForAloneSelector()
-}
-changeOnGrid()
+
 })
 
 // Закрытие попапа на ESC
@@ -177,14 +172,12 @@ const addImage = (event) => {
   const changeMainContentImageOnGrid = new AddRemove({selector: mainContentImage, NewClassName: 'main-content__image-grid'});
   const changeMainContentTextContainerOnGrid = new AddRemove({selector: mainContentTextContainer, NewClassName: 'display_none'});
   const changeMainContentOnGrid  = new AddRemove({selector: mainContent, NewClassName: 'main-content-grid'});
-
-const changeOnGrid = () => {
+  
   changeMainContentContainerOnGrid.changeClass()
   changeMainContentImageOnGrid.changeClass()
   changeMainContentTextContainerOnGrid.addClass()
   changeMainContentOnGrid.addClassForAloneSelector()
-}
-changeOnGrid()
+
   formAddImage.reset()
 }
 ob.forEach((item) => {
