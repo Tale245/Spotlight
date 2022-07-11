@@ -129,18 +129,6 @@
     line-height: 16px;
   }
 }
-.text-time{
-  margin: 0 auto;
-  justify-content: center;
-  margin-top: 25vh;
-  color: white;
-  max-width: 300px
-}
-@media screen and (max-width: 900px) {
-  .text-time{
-    margin-top: 20vh;
-  }
-}
 .popup__image-text__text-span{
   font-weight: 300;
 }
