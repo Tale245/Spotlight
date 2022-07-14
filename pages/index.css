@@ -135,3 +135,72 @@
 .display_none{
   display: none;
 }
+
+/* CSS FOR SUBTITLE-CONTAINER */
+.popup_price-list__container{
+  margin: 0;
+  justify-content: center;
+}
+.popup__subtitle-container{
+  display: flex;
+  padding-top: 55px;
+  justify-content: space-between;
+}
+.price-list__title{
+  margin: 0;
+}
+.popup__subtitle{
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000; 
+}
+.popup__column-container{
+  margin-right: 114px;
+}
+.popup__column-container:last-of-type{
+  margin-right: 0;
+}
+.popup__paragraph{
+  text-align: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+
+}
+.button_edit-info{
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 1px solid #000000;
+  background: none;
+  border-radius: 10px;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 19px;
+  color: #000000;
+}
+.form__input{
+  margin: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #000000;
+}
+.popup__input-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

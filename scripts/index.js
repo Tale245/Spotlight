@@ -1,8 +1,27 @@
-import {popupAddItem, popupOverlay, popupOverlayImage, btnAddItem, mainContainer, formAddImage, inputLink, inputModel, inputDevice, inputDescription, btnGrid, btnNoGrid, mainContent, popupOpenImage, popupImage } from './constants.js';
+import {popupAddItem, popupOverlay,
+   popupOverlayImage, btnAddItem, mainContainer, 
+   formAddImage, inputLink, inputModel, inputDevice,
+    inputDescription, btnGrid, btnNoGrid, mainContent,
+     popupOpenImage, popupImage, popupPriceList, buttonQ, popupOverlayPriceList } from './constants.js';
 import AddRemove from "./AddRemove.js";
+const btnChange= document.querySelector('.button_edit-info');
+const columnContainer = document.querySelectorAll('.popup__column-container');
+const priceListTitle = document.querySelector('.price-list__title')
+const popupPriceListForm = document.querySelector('.popup__form_price-list')
+
+const changePriceList = () => {
+  columnContainer.forEach((item) => {
+    item.classList.add('display_none');
+  })
+  popupPriceListForm.classList.remove('display_none')
+  btnChange.classList.add('display_none')
+  priceListTitle.textContent = 'Редактировать'
+}
+btnChange.addEventListener('click', () => {
+  changePriceList()
+})
 
 // Меняем дизайн меню на NO GRID 
-
 btnNoGrid.addEventListener('click', () => {
   const mainContentContainer = document.querySelectorAll('.main-content__container-grid');
 const mainContentImage = document.querySelectorAll('.main-content__image-grid');
@@ -57,12 +76,18 @@ const closePopup = (popup) => {
 btnAddItem.addEventListener('click', () => {
   openPopup(popupAddItem)
 })
+buttonQ.addEventListener('click', () => {
+  openPopup(popupPriceList)
+})
 // Закрытие попапа кликом на оверлей
 popupOverlay.addEventListener('click', () => {
   closePopup(popupAddItem)
 })
 popupOverlayImage.addEventListener('click', () => {
   closePopup(popupOpenImage)
+})
+popupOverlayPriceList.addEventListener('click', () => {
+  closePopup(popupPriceList)
 })
 // Функция включающая НЕ ГРИД и отключающая кнопку ГРИД при разрешении экрана менее 631px
 window.addEventListener("resize", function() {

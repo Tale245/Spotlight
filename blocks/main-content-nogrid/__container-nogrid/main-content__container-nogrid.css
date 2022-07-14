@@ -9,8 +9,8 @@
 @media screen and (max-width: 1300px)  {
   .main-content__container-nogrid{
     margin-bottom: 40px;
-    max-width: 45%;
-    max-height: 45%;
+    max-width: 33%;
+    max-height: 33%;
   }
 }
 @media screen and (max-width: 650px)  {
